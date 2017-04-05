@@ -1,6 +1,9 @@
 /*
-   emojify.js 1.0.0
+   emojify.js 0.2.0
    by robbie0630
+   
+   Notes:
+     Expect breaking changes
    
    Description:
      converts text into Discord-compatible emojis
@@ -20,6 +23,8 @@ function emojify(str) {
 			return ':ab:';
 		} else if (/[oO]/.test(e)) {
 			return ':o2:';
+		} else if (/[aA]/.test(e)) {
+			return ':a:';
 		} else if (/[bB]/.test(e)) {
 			return ':b:'
 		} else if (/[a-zA-Z]/.test(e)) {
