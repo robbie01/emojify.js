@@ -6,6 +6,7 @@
      converts text into Discord-compatible emojis
    
    PLANNED FEATURES:
+   * switch/case for readability
    * needs more ES2015
    * needs more ES2016
    * test if argument is a string
@@ -17,14 +18,14 @@ function emojify(str) {
 	return Array.prototype.map.call(str, (e, i, a) => {
 		if (/[aA][bB]/.test(e+a[i+1])) {
 			return ':ab:';
-        } else if (/[oO]/.test(e)) {
+		} else if (/[oO]/.test(e)) {
 			return ':o2:';
-        } else if (/[bB]/.test(e)) {
-            return ':b:'
-        } else if (/[a-zA-Z]/.test(e)) {
+		} else if (/[bB]/.test(e)) {
+			return ':b:'
+		} else if (/[a-zA-Z]/.test(e)) {
 			return ':regional_indicator_' + e.toLowerCase() + ':'
-    	} else {
+		} else {
 			return e;
-        }
-    }).join(' ');
+		}
+	}).join(' ');
 }
